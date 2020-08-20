@@ -1,18 +1,18 @@
-import './style.css';
-import WebpackImg from './webpack.png';
+import './scss/style.scss';
+import navMenu from './components/nav/nav.js';
+import home from './components/home/home.js';
 
-function component() {
-  const div = document.createElement('div');
+const content = document.createElement('div');
+content.id = 'content';
+document.body.appendChild(content);
 
-  const p = document.createElement('p');
-  p.textContent = 'Webpack Test';
-  div.appendChild(p);
+const loadNavMenu = () => content.appendChild(navMenu());
 
-  const img = new Image();
-  img.src = WebpackImg;
-  div.appendChild(img);
+const loadHomePage = () => content.appendChild(home());
 
-  return div;
-}
+const initialLoad = () => {
+  loadNavMenu();
+  loadHomePage();
+};
 
-document.body.appendChild(component());
+initialLoad();
