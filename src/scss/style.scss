@@ -32,6 +32,10 @@ body {
     url('../images/body-bg.jpg') center / cover no-repeat;
 }
 
+.active-nav-link {
+  border-bottom: 3px solid $carrot;
+}
+
 .nav {
   position: absolute;
   top: 5%;

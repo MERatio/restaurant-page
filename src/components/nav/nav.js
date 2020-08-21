@@ -14,6 +14,7 @@ const navMenu = () => {
 
     const link = document.createElement('a');
     link.classList.add('nav-link');
+    link.id = linkName.toLowerCase() + 'Link';
     link.textContent = linkName;
 
     li.appendChild(link);

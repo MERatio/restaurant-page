@@ -1,10 +1,4 @@
-const setHomeBg = () => {
-  document.body.classList.add('body-bg');
-};
-
 const home = () => {
-  setHomeBg();
-
   const div = document.createElement('div');
   div.classList.add('home');
 
