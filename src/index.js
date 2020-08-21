@@ -1,6 +1,7 @@
 import './scss/style.scss';
 import navMenu from './components/nav/nav.js';
 import home from './components/home/home.js';
+import menu from './components/menu/menu.js';
 
 const body = document.body;
 
@@ -17,6 +18,8 @@ const loadHomePage = () => {
   body.classList.add('body-bg');
   content.appendChild(home());
 };
+
+const loadMenuPage = () => content.appendChild(menu());
 
 const addActiveNavLinkStyle = (navLinkId, navLinks) => {
   navLinks.forEach((navLink) => {
@@ -38,6 +41,7 @@ const navLinkEvent = (e) => {
       loadHomePage();
       break;
     case 'menuLink':
+      loadMenuPage();
       break;
     case 'contactLink':
       break;
