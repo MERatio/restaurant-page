@@ -6,33 +6,32 @@ const body = document.body;
 
 const content = document.createElement('div');
 content.id = 'content';
-body.appendChild(content);
 
-const loadNavMenu = () => content.appendChild(navMenu());
+let navLinks;
+
+const loadNavMenu = () => body.appendChild(navMenu());
+
+const loadContentDiv = () => body.appendChild(content);
 
 const loadHomePage = () => {
   body.classList.add('body-bg');
   content.appendChild(home());
 };
 
-const addActiveNavLinkStyle = (navLinkId) => {
-  const navLink = document.getElementById(navLinkId);
-  navLink.classList.add('active-nav-link');
-};
-
-const addEvents = () => {
-  const navLinks = document.querySelectorAll('.nav-link');
-  navLinks.forEach((navLink) =>
-    navLink.addEventListener('click', navLinkEvent)
-  );
+const addActiveNavLinkStyle = (navLinkId, navLinks) => {
+  navLinks.forEach((navLink) => {
+    navLink.id === navLinkId
+      ? navLink.classList.add('active-nav-link')
+      : navLink.classList.remove('active-nav-link');
+  });
 };
 
 const navLinkEvent = (e) => {
-  wipeContents();
-
   const navLinkId = e.target.id;
 
-  addActiveNavLinkStyle(navLinkId);
+  navLinkId === homeLink ? wipeContents('homeLink') : wipeContents();
+
+  addActiveNavLinkStyle(navLinkId, navLinks);
 
   switch (navLinkId) {
     case 'homeLink':
@@ -45,15 +44,23 @@ const navLinkEvent = (e) => {
   }
 };
 
-const wipeContents = () => {
-  body.classList.remove('body-bg');
+const addEvents = () => {
+  navLinks.forEach((navLink) =>
+    navLink.addEventListener('click', navLinkEvent)
+  );
+};
+
+const wipeContents = (isHomeLink = false) => {
+  if (!isHomeLink) {
+    body.classList.remove('body-bg');
+  }
   content.innerHTML = '';
-  loadNavMenu();
-  addEvents();
 };
 
 const init = () => {
   loadNavMenu();
+  navLinks = document.querySelectorAll('.nav-link');
+  loadContentDiv();
   loadHomePage();
   addEvents();
 };
