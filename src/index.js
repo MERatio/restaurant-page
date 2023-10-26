@@ -1,1 +1,2 @@
-console.log('test');
+import './css/normalize.css';
+import './css/style.css';

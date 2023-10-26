@@ -1,0 +1,95 @@
+@font-face {
+	font-family: 'Spongeboy Me Bob';
+	src:
+		url('../fonts/spongeboy_me_bob-webfont.woff2') format('woff2'),
+		url('../fonts/spongeboy_me_bob-webfont.woff') format('woff');
+}
+
+:root {
+	--system-font: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif,
+		'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+	--black: #030404;
+	--dark-red: #6c2217;
+	--transparent-light-brown: rgba(228, 214, 158, 0.9);
+	--brown: #542e04;
+}
+
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	font-family: var(--system-font);
+	color: var(--black);
+	min-height: 100vh;
+	background-image: url('../images/spongebob-blue-bg.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+img {
+	max-width: 100%;
+}
+
+.mt-1 {
+	margin-top: 10px;
+}
+
+.mt-2 {
+	margin-top: 20px;
+}
+
+.text-uppercase {
+	text-transform: uppercase;
+}
+
+.text-theme {
+	font-family: 'Spongeboy Me Bob';
+	color: var(--dark-red);
+	text-shadow:
+		-1px 0 var(--black),
+		0 1px var(--black),
+		1px 0 var(--black),
+		0 -1px var(--black);
+}
+
+.content {
+	max-width: 900px;
+	display: flex;
+	flex-direction: column;
+	margin: 30px auto 0 auto;
+}
+
+.content-section {
+	background: var(--transparent-light-brown);
+	border: 3px solid var(--brown);
+	padding: 15px;
+}
+
+/* Content home */
+
+.content-home {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	align-items: center;
+	gap: 15px;
+}
+
+@media only screen and (max-width: 650px) {
+	.content-home {
+		grid-template-columns: 1fr;
+	}
+
+	.content-home h1 {
+		text-align: center;
+	}
+}
