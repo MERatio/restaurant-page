@@ -9,8 +9,6 @@ const contentMain = document.getElementById('content');
 function handleTabClick(e) {
 	const activeTabName = e.currentTarget.dataset.tabName;
 
-	console.log({ prevActiveTabName, activeTabName });
-
 	if (prevActiveTabName === activeTabName) {
 		return;
 	} else {
