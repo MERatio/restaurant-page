@@ -3,11 +3,19 @@ import menu from './components/menu';
 import contact from './components/contact';
 
 const tabs = document.querySelectorAll('.tab');
+let prevActiveTabName = 'home';
 const contentMain = document.getElementById('content');
 
 function handleTabClick(e) {
 	const activeTabName = e.currentTarget.dataset.tabName;
-	let activeContent;
+
+	console.log({ prevActiveTabName, activeTabName });
+
+	if (prevActiveTabName === activeTabName) {
+		return;
+	} else {
+		prevActiveTabName = activeTabName;
+	}
 
 	for (const tab of tabs) {
 		if (tab.dataset.tabName === activeTabName) {
@@ -17,6 +25,7 @@ function handleTabClick(e) {
 		}
 	}
 
+	let activeContent;
 	switch (activeTabName) {
 		case 'home':
 			activeContent = home;
