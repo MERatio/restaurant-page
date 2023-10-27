@@ -269,11 +269,43 @@ function contact() {
 
 
 
+const tabs = document.querySelectorAll('.tab');
 const contentMain = document.getElementById('content');
 
+function handleTabClick(e) {
+	const activeTabName = e.currentTarget.dataset.tabName;
+	let activeContent;
+
+	for (const tab of tabs) {
+		if (tab.dataset.tabName === activeTabName) {
+			tab.classList.add('active');
+		} else {
+			tab.classList.remove('active');
+		}
+	}
+
+	switch (activeTabName) {
+		case 'home':
+			activeContent = components_home;
+			break;
+		case 'menu':
+			activeContent = components_menu;
+			break;
+		case 'contact':
+			activeContent = components_contact;
+			break;
+	}
+	contentMain.innerHTML = '';
+	contentMain.appendChild(activeContent());
+}
+
 function renderInitialContent() {
-	for (const content of [components_home, components_menu, components_contact]) {
-		contentMain.appendChild(content());
+	contentMain.appendChild(components_home());
+}
+
+function attachEventListener() {
+	for (const tab of tabs) {
+		tab.addEventListener('click', handleTabClick);
 	}
 }
 
@@ -285,6 +317,7 @@ function renderInitialContent() {
 
 
 renderInitialContent();
+attachEventListener();
 
 /******/ })()
 ;

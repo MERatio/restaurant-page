@@ -9,6 +9,7 @@
 	--system-font: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif,
 		'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 	--black: #030404;
+	--red: #ce412c;
 	--dark-red: #6c2217;
 	--transparent-light-brown: rgba(228, 214, 158, 0.9);
 	--brown: #542e04;
@@ -74,6 +75,32 @@ img {
 		0 -1px var(--black);
 }
 
+/* Nav */
+.nav {
+	background-color: var(--transparent-light-brown);
+	padding: 15px;
+	border-bottom: 3px solid var(--brown);
+	display: flex;
+	justify-content: center;
+	gap: 50px;
+}
+
+.tab {
+	text-decoration: none;
+	font-size: 2rem;
+	cursor: pointer;
+}
+
+.tab:hover,
+.tab:active {
+	color: var(--red);
+}
+
+.tab.active {
+	color: var(--red);
+}
+
+/* Content */
 .content {
 	max-width: 900px;
 	margin: 30px auto 0 auto;
