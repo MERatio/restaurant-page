@@ -1,0 +1,24 @@
+ul {
+	list-style: none;
+}
+
+.menu-items {
+	font-family: 'Spongeboy Me Bob';
+}
+
+.menu-line {
+	display: flex;
+	align-items: baseline;
+}
+
+.menu-middle {
+	border-bottom: 3px dotted var(--black);
+	flex-grow: 1;
+	margin: 0 5px;
+}
+
+.seaform-soda-content {
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+}

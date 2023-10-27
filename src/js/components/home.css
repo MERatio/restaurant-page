@@ -1,0 +1,5 @@
+@media only screen and (max-width: 650px) {
+	.content-home h1 {
+		text-align: center;
+	}
+}
