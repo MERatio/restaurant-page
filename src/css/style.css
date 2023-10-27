@@ -76,8 +76,6 @@ img {
 
 .content {
 	max-width: 900px;
-	display: flex;
-	flex-direction: column;
 	margin: 30px auto 0 auto;
 }
 
