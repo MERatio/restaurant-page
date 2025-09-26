@@ -28,6 +28,11 @@ html {
 
 body {
   font-family: var(--system-font);
+  min-height: 100vh;
+  background-image: url('../images/spongebob-blue-bg.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .text-theme {
