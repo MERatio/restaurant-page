@@ -35,6 +35,14 @@ body {
   background-size: cover;
 }
 
+img {
+  max-width: 100%;
+}
+
+.mt-1 {
+  margin-top: 10px;
+}
+
 .text-theme {
   font-family: 'Spongeboy Me Bob';
   text-transform: uppercase;
@@ -48,6 +56,7 @@ body {
   background-color: var(--transparent-light-brown);
   padding: 15px;
   border-bottom: 3px solid var(--brown);
+  margin-bottom: 40px;
 }
 
 .main-nav {
@@ -70,4 +79,31 @@ body {
 
 .tab.active {
   color: var(--red);
+}
+
+/* content */
+.content {
+  max-width: 900px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.content-section {
+  background: var(--transparent-light-brown);
+  border: 3px solid var(--brown);
+  padding: 20px;
+}
+
+/* home */
+.content-home {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  gap: 15px;
+}
+
+@media (min-width: 700px) {
+  .content-home {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
