@@ -1,0 +1,68 @@
+@font-face {
+  font-family: 'Spongeboy Me Bob';
+  src: url('../fonts/spongeboy_me_bob-webfont.woff2') format('woff2'),
+    url('../fonts/spongeboy_me_bob-webfont.woff') format('woff');
+}
+
+:root {
+  --system-font: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  --black: #030404;
+  --red: #ce412c;
+  --dark-red: #6c2217;
+  --transparent-light-brown: rgba(228, 214, 158, 0.9);
+  --brown: #542e04;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: var(--system-font);
+}
+
+.text-theme {
+  font-family: 'Spongeboy Me Bob';
+  text-transform: uppercase;
+  color: var(--dark-red);
+  text-shadow: -1px 0 var(--black), 0 1px var(--black), 1px 0 var(--black),
+    0 -1px var(--black);
+}
+
+/* main-header, main-nav */
+.main-header {
+  background-color: var(--transparent-light-brown);
+  padding: 15px;
+  border-bottom: 3px solid var(--brown);
+}
+
+.main-nav {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.tab {
+  font-size: 2rem;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.tab:hover,
+.tab:active {
+  color: var(--red);
+}
+
+.tab.active {
+  color: var(--red);
+}
