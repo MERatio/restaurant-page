@@ -123,39 +123,6 @@ img {
   gap: 15px;
 }
 
-/* menu */
-ul {
-  list-style: none;
-}
-
-.menu-items {
-  font-family: 'Spongeboy Me Bob';
-}
-
-.menu-line {
-  display: flex;
-  align-items: baseline;
-}
-
-.menu-middle {
-  border-bottom: 3px dotted var(--black);
-  flex-grow: 1;
-  margin: 0 5px;
-}
-
-.seafoam-soda-content {
-  width: 50%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* contact */
-.contact-google-maps-iframe {
-  border: none;
-  width: 100%;
-  aspect-ratio: 16 / 9;
-}
-
 @media (min-width: 700px) {
   .main-nav {
     gap: 80px;
