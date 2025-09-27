@@ -82,11 +82,11 @@ img {
 .main-nav {
   display: flex;
   justify-content: center;
-  gap: 50px;
+  gap: 40px;
 }
 
 .tab {
-  font-size: 2rem;
+  font-size: 1.6rem;
   background-color: transparent;
   border: 0;
   cursor: pointer;
@@ -157,6 +157,14 @@ ul {
 }
 
 @media (min-width: 700px) {
+  .main-nav {
+    gap: 80px;
+  }
+
+  .tab {
+    font-size: 2rem;
+  }
+
   .content-home,
   .menu-items {
     grid-template-columns: repeat(2, 1fr);
