@@ -43,6 +43,26 @@ img {
   margin-top: 10px;
 }
 
+.mt-2 {
+  margin-top: 20px;
+}
+
+.ml-1 {
+  margin-left: 10px;
+}
+
+.ml-2 {
+  margin-left: 20px;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-center {
+  text-align: center;
+}
+
 .text-theme {
   font-family: 'Spongeboy Me Bob';
   text-transform: uppercase;
@@ -95,15 +115,43 @@ img {
 }
 
 /* home */
-.content-home {
+.content-home,
+.menu-items {
   display: grid;
   grid-template-columns: 1fr;
   align-items: center;
   gap: 15px;
 }
 
+/* menu */
+ul {
+  list-style: none;
+}
+
+.menu-items {
+  font-family: 'Spongeboy Me Bob';
+}
+
+.menu-line {
+  display: flex;
+  align-items: baseline;
+}
+
+.menu-middle {
+  border-bottom: 3px dotted var(--black);
+  flex-grow: 1;
+  margin: 0 5px;
+}
+
+.seafoam-soda-content {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 @media (min-width: 700px) {
-  .content-home {
+  .content-home,
+  .menu-items {
     grid-template-columns: repeat(2, 1fr);
   }
 }
